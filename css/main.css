@@ -1,3 +1,87 @@
-@import "./reset.css";
-@import "./common.css";
-@import "./wiki-layout.css";
+@import './reset.css';
+@import './common.css';
+@import './photo.css';
+@import './wiki-layout.css';
+@import './comment.css';
+
+/* 폼 전체 레이아웃 */
+.comment-form {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ddd;
+  height: 55px;
+  width: 100%; /* 필요에 따라 조정 */
+  box-sizing: border-box;
+  background-color: #fff;
+  margin-bottom: 32px;
+}
+
+/* 아이콘 영역 */
+.icon-wrapper {
+  display: flex;
+  align-items: center;
+  margin-right: 8px;
+}
+
+.icon-wrapper img {
+  width: 30px;
+  height: 30px;
+  margin-left: 10px;
+  object-fit: contain;
+}
+
+/* 텍스트 입력창 */
+.comment-form input[type='text'] {
+  flex: 1;
+  border: none;
+  outline: none;
+  font-size: 14px;
+  color: #333;
+  /* placeholder 색상은 브라우저별로 다를 수 있으므로 아래 예시 */
+}
+
+/* 취소 버튼 */
+.cancel-btn {
+  background-color: #eee;
+  color: #333;
+  border: none;
+  padding: 8px 16px;
+  height: 100%;
+  width: 10%;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+/* 등록 버튼 */
+.submit-btn {
+  background-color: #d7f5f1; /* 연한 민트색/하늘색 계열 */
+  color: #333;
+  border: none;
+  padding: 8px 16px;
+  height: 100%;
+  width: 10%;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+/* 버튼 호버 효과(선택 사항) */
+.cancel-btn:hover,
+.submit-btn:hover {
+  opacity: 0.9;
+}
+
+/* placeholder 스타일 (크롬, 사파리 등 webkit 계열) */
+.comment-form input::placeholder {
+  color: #aaa;
+}
+
+/* placeholder 스타일 (파이어폭스) */
+.comment-form input:-moz-placeholder {
+  color: #aaa;
+}
+.comment-form input::-moz-placeholder {
+  color: #aaa;
+}
+.comment-form input:-ms-input-placeholder {
+  color: #aaa;
+}
